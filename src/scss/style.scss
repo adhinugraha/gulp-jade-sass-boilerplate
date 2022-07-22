@@ -1,0 +1,105 @@
+@import "partials/_normalize";
+@import "partials/_variables";
+@import "partials/_layout";
+@import "partials/_mixins";
+
+
+.container {
+	width: 90%;
+	max-width: $M; // breakpoints inside partials > _layout.scss
+	margin: 0 auto;
+	@include clearfix;
+}
+
+
+
+
+body {
+  margin: 0 auto;
+  width: 90%;
+  background: #aaffca;
+  font: {
+    size: 1.6rem;
+    family: $primary-font; // variables inside partials > _variables.scss
+  }
+  
+}
+
+
+
+
+header {
+  display: block;
+  padding: 0 0 50px 0;
+  height: 100px;
+
+  #logo{
+    display: block;
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+  }
+  li {
+    float: left;
+    margin-left: 20px;
+
+    a{
+      padding: 0 1em;
+      text-decoration: none;
+      &.active,&:hover{
+        background-color: #eee;
+      }
+
+    }
+  }
+  a{
+    display: block;
+    line-height: 100px;
+    transition: .5s background-color;
+
+  }
+}
+
+.main {
+  section{
+    background-color: #ccc;
+    padding: 2em;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.footer {
+  padding: 25px 0;
+  nav {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      li {
+        float: left;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+
+#index section{
+  height: 400px;
+}
+
+#about-us section{
+  height: 300px;
+}
+
+#contact-us section{
+  height: 100px;
+}
+
+
+
+// adding mediaqueries here...
+@import "partials/_mediaqueries";
